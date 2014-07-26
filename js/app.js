@@ -3,8 +3,12 @@ var App = Ember.Application.create({
 });
 App.Router.map(function() {
   this.route('credits', { path: '/thanks' });
-  this.route('about');
-  this.resource('products');
+  this.resource('products', function() {
+    this.resource('product', { path: '/:title' });
+  });
+  this.resource('contacts', function() {
+    this.resource('contact', { path: '/:name' });
+  });
 });
 App.IndexController = Ember.Controller.extend({
   productsCount: 6,
@@ -13,7 +17,7 @@ App.IndexController = Ember.Controller.extend({
     return (new Date()).toDateString();
   }.property()
 });
-App.AboutController = Ember.Controller.extend({
+App.ContactsIndexController = Ember.Controller.extend({
   contactName: 'Anostagia',
   avatar: 'http://courseware.codeschool.com/ember/images/avatar.png',
   open: function() {
@@ -26,6 +30,22 @@ App.ProductsRoute = Ember.Route.extend({
     return App.PRODUCTS;
   }
 });
+App.ProductRoute = Ember.Route.extend({
+  model: function(params) {
+    return App.PRODUCTS.findBy('title', params.title);
+  }
+});
+App.ContactsRoute = Ember.Route.extend({
+  model: function() {
+    return App.CONTACTS;
+  }
+});
+App.ContactRoute = Ember.Route.extend({
+  model: function(params) {
+    return App.CONTACTS.findBy('name', params.name);
+  }
+});
+
 App.PRODUCTS = [
   {
     title: 'Flint',
@@ -40,5 +60,18 @@ App.PRODUCTS = [
     description: 'Easily combustible small sticks or twigs used for starting a fire.',
     isOnSale: false,
     image: 'http://courseware.codeschool.com/ember/images/products/kindling.png'
+  }
+];
+
+App.CONTACTS = [
+  {
+    name: 'Giamia',
+    about: 'Although Giamia came from a humble spark of lightning, he quickly grew to be a great craftsman, providing all the warming instruments needed by those close to him.',
+    avatar: 'http://courseware.codeschool.com/ember/images/contacts/giamia.png'
+  },
+  {
+    name: 'Anostagia',
+    about: 'Knowing there was a need for it, Anostagia drew on her experience and spearheaded the Flint & Flame storefront. In addition to coding the site, she also creates a few products available in the store.',
+    avatar: 'http://courseware.codeschool.com/ember/images/contacts/anostagia.png'
   }
 ];

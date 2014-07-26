@@ -32,7 +32,10 @@
   list-style-type: none;
 }
 
-
+/* Fix menu*/
+div.navbar.navbar-default div.container ul.nav.navbar-nav.navbar-right{
+  padding-top: 10px;
+}
 
 .navbar-default .navbar-nav > li {
   cursor: pointer;
