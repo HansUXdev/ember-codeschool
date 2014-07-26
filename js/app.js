@@ -5,6 +5,7 @@ App.Router.map(function() {
   this.route('credits', { path: '/thanks' });
   this.resource('products', function() {
     this.resource('product', { path: '/:product_id' });
+    this.route('onsale');
   });
   this.resource('contacts', function() {
     this.resource('contact', { path: '/:contact_id' });
@@ -16,11 +17,13 @@ App.IndexController = Ember.ArrayController.extend({
   logo: 'http://courseware.codeschool.com/ember/images/logo-small.png',
   time: function() {
     return (new Date()).toDateString();
-  }.property()
+  }.property(),
+  onSale: function() {
+    return this.filterBy('isOnSale').slice(0,3);
+  }.property('@each.isOnSale')
 });
-App.ContactsIndexController = Ember.ObjectController.extend({
-  //Update the contactName property to use an Ember computed alias.
-  contactName: Ember.computed.alias('name'),
+App.ContactsIndexController = Ember.Controller.extend({
+  contactName: 'Anostagia',
   avatar: 'http://courseware.codeschool.com/ember/images/avatar.png',
   open: function() {
     return ((new Date()).getDay() === 0) ? "Closed" : "Open";
@@ -30,7 +33,15 @@ App.ProductsController = Ember.ArrayController.extend({
   sortProperties: ['title']
 });
 App.ContactsController = Ember.ArrayController.extend({
-  sortProperties: ['name']
+  sortProperties: ['name'],
+  contactsCount: Ember.computed.alias('length')
+});
+App.ProductsIndexController = Ember.ArrayController.extend({
+  deals: function() {
+    return this.filter(function(product) {
+      return product.get('price') < 500;
+    });
+  }.property('@each.price')
 });
 
 App.ProductsRoute = Ember.Route.extend({
@@ -48,14 +59,16 @@ App.IndexRoute = Ember.Route.extend({
     return this.store.findAll('product');
   }
 });
-
-//add for 3 & 4
-App.ContactsIndexRoute = Ember.Route.extend({
-  model: function() {
-    return this.store.find('contact', 201);
+App.ProductsIndexRoute = Ember.Route.extend({
+  model: function(){
+    return this.store.findAll('product');
   }
 });
-//
+App.ProductsOnsaleRoute = Ember.Route.extend({
+  model: function(){
+    return this.modelFor('products').filterBy('isOnSale');
+  }
+});
 
 App.ApplicationAdapter = DS.FixtureAdapter.extend();
 App.Product = DS.Model.extend({
