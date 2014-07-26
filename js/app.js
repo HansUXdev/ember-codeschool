@@ -10,6 +10,9 @@ App.Router.map(function() {
     this.resource('contact', { path: '/:name' });
   });
 });
+
+
+// Index
 App.IndexController = Ember.Controller.extend({
   productsCount: 6,
   logo: 'http://courseware.codeschool.com/ember/images/logo-small.png',
@@ -25,6 +28,9 @@ App.ContactsIndexController = Ember.Controller.extend({
   }.property()
 });
 
+
+
+
 App.ProductsRoute = Ember.Route.extend({
   model: function() {
     return App.PRODUCTS;
@@ -35,6 +41,8 @@ App.ProductRoute = Ember.Route.extend({
     return App.PRODUCTS.findBy('title', params.title);
   }
 });
+
+
 App.ContactsRoute = Ember.Route.extend({
   model: function() {
     return App.CONTACTS;
@@ -46,6 +54,7 @@ App.ContactRoute = Ember.Route.extend({
   }
 });
 
+// Modify
 App.PRODUCTS = [
   {
     title: 'Flint',
