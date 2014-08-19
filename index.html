@@ -1,218 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!-- <base href='http://courseware.codeschool.com/ember/' /> -->
-  <link href='bootstrap.css' rel='stylesheet' />
-  <link href='application.css' rel='stylesheet' />
-  <script src='js/jquery.js'></script>
-  <script src='js/accounting.js'></script>
-  <script src='js/markdown.js'></script>
-  <script src='js/handlebars.js'></script>
-  <script src='js/ember.js'></script>
-  <script src='js/ember-data.js'></script>
-  <script src='js/app.js'></script>
-</head>
-<body>
-  <script type='text/x-handlebars' data-template-name='application'>
-    <div class='navbar navbar-default'>
-      <div class='container'>
-        {{#link-to 'index' class='navbar-brand'}}<img src='images/logo.png' alt='logo' height='34' width='224' />{{/link-to}}
-        <ul class='nav navbar-nav navbar-right'>
-          {{#link-to 'index' tagName='li'}}Home{{/link-to}}
-          {{#link-to 'products' tagName='li'}}Products{{/link-to}}
-          {{#link-to 'contacts' tagName='li'}}Contacts{{/link-to}}
-        </ul>
-      </div>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ember-codeschool : Basic tutorial on CodeSchool">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Ember-codeschool</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/HansUXdev/ember-codeschool">View on GitHub</a>
+
+          <h1 id="project_title">Ember-codeschool</h1>
+          <h2 id="project_tagline">Basic tutorial on CodeSchool</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/HansUXdev/ember-codeschool/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/HansUXdev/ember-codeschool/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
     </div>
-    <div class='container'>
-      {{outlet}}
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
     </div>
-    <footer class='container'>
-      <hr />
-      <p class='pull-left'>&copy; 2013 The Flint &amp; Flame</p>
-      <p class='pull-right'>{{#link-to 'credits'}}Credits{{/link-to}}</p>
-    </footer>
-  </script>
-  <script type='text/x-handlebars' data-template-name='index'>
-    <div class='jumbotron'>
-      <h1>Welcome to The Flint &amp; Flame!</h1>
-      <p class='tagline'>
-        <img {{bind-attr src='logo'}} alt='Logo' />
-        Everything you need to make it through the winter.
-      </p>
-      <p>
-        {{#link-to 'products' class='btn btn-primary btn-lg'}}
-          Browse All {{productsCount}} Items &raquo;
-        {{/link-to}}
-      </p>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Ember-codeschool maintained by <a href="https://github.com/HansUXdev">HansUXdev</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
-    <div class='row'>
-      {{#each onSale}}
-        {{product-details product=this classNames='col-sm-4'}}
-      {{/each}}
-    </div>
-    <p class='pull-right text-muted'>Rendered on {{time}}</p>
-  </script>
-  <script type='text/x-handlebars' data-template-name='contacts/index'>
-    <div class='row'>
-      <img {{bind-attr src='avatar'}} alt='Avatar' class='img-thumbnail col-sm-4'/>
-      <div class='col-sm-8'>
-        <h1>About The Fire Sprites</h1>
-        <p>Contact {{contactName}} for more info!</p>
-        <p>Current Status: {{open}}.</p>
-      </div>
-    </div>
-  </script>
-  <script type='text/x-handlebars' data-template-name='credits'>
-    <h1>Thanks for the Help!</h1>
-    <p>This site would not be possible without the hardworking Ember Core Team!</p>
-  </script>
-  <script type='text/x-handlebars' data-template-name='products'>
-    <div class='row'>
-      <div class='col-sm-3'>
-        <div class='list-group'>
-        {{#link-to 'products.deals' classNames='list-group-item'}}Deals{{/link-to}}
-        {{#link-to 'products.onsale' classNames='list-group-item'}}On Sale{{/link-to}}
-      </div>
-        <div class='list-group'>
-          {{#each}}
-            {{#link-to 'product' this classNames='list-group-item'}}
-              {{title}}
-            {{/link-to}}
-          {{/each}}
-        </div>
-      </div>
-      <div class='col-sm-9'>
-        {{outlet}}
-      </div>
-    </div>
-  </script>
-  <script type='text/x-handlebars' data-template-name='product'>
-    <div class='row'>
-      <div class='col-sm-7'>
-        <h2>{{title}}</h2>
-        <h3 class='text-success'>${{price}}</h3>
-        <p class='text-muted'>{{description}}</p>
-        <p class='text-muted'>This Product has a {{rating}} star rating!</p>
-        <p>Finely crafted by {{#link-to 'contact' crafter}}{{crafter.name}}{{/link-to}}.</p>
-        {{render 'reviews' reviews}}
-        {{#if isNotReviewed}}
-          <div class='new-review'>
-            <h3>Review {{title}}</h3>
-            {{#if review.text}}
-              <p class='text-muted'>{{review.text}}</p>
-            {{/if}}
-            {{textarea valueBinding=review.text}}
-            {{view Ember.Select content=ratings value=review.rating}}
-            <button {{action 'createReview'}} class='btn-primary'>Review</button>
-          </div>
-        {{/if}}
-      </div>
-      <div class='col-sm-5'>
-        <img {{bind-attr src='image'}} class='img-thumbnail img-rounded'/>
-      </div>
-    </div>
-    {{contact-details contact=crafter className='row'}}
-  </script>
-  <script type='text/x-handlebars' data-template-name='products/index'>
-    <h1>Products!</h1>
-    <ul class='list-unstyled'>
-      {{#each}}
-        {{product-details product=this classNames='row' tagName='li'}}
-      {{/each}}
-    </ul>
-  </script>
-  <script type='text/x-handlebars' data-template-name='contacts'>
-    <div class='row'>
-      <div class='col-sm-9'>
-        {{outlet}}
-      </div>
-      <div class='col-sm-3'>
-        <div class='list-group'>
-          {{#each}}
-            {{#link-to 'contact' this classNames='list-group-item'}}
-              {{name}}
-            {{/link-to}}
-          {{/each}}
-        </div>
-      </div>
-    </div>
-  </script>
-  <script type='text/x-handlebars' data-template-name='contact'>
-    <div class='row'>
-      <div class='col-sm-5'>
-        <img {{bind-attr src='avatar' alt='name'}} class='img-thumbnail img-rounded'/>
-      </div>
-      <div class='col-sm-7'>
-        <h2>{{name}}</h2>
-        <p>{{about}}</p>
-        {{render 'contact/products' products}}
-      </div>
-    </div>
-  </script>
-  <script type='text/x-handlebars' data-template-name='contact/products'>
-    <h3>Products here3</h3>
-    <ul>
-      {{#each}}
-        <li>{{#link-to 'product' this}}{{title}}{{/link-to}}</li>
-      {{/each}}
-    </ul>
-  </script>
-  <script type='text/x-handlebars' data-template-name='products/onsale'>
-    <h1>Products On Sale</h1>
-    <ul class='list-unstyled'>
-      {{#each}}
-        {{product-details product=this classNames='row' tagName='li'}}
-      {{/each}}
-    </ul>
-  </script>
-  <script type='text/x-handlebars' data-template-name='products/deals'>
-    <h1>Todays Product Deals!</h1>
-    <ul class='list-unstyled'>
-      {{#each}}
-        {{product-details product=this classNames='row' tagName='li'}}
-      {{/each}}
-    </ul>
-  </script>
-  <script type='text/x-handlebars' data-template-name='components/product-details'>
-    <img {{bind-attr src='product.image'}} class='img-thumbnail col-sm-5' />
-    <div class='col-sm-7'>
-      <h2>{{product.title}}</h2>
-      <p class='product-description'>{{product.description}}</p>
-      <p>{{#link-to 'product' product class='btn btn-success'}}
-        Buy for ${{product.price}}{{/link-to}}
-      </p>
-      {{#if hasReviews}}
-        <p class='text-muted'>Read all reviews ({{reviewsCount}}).</p>
-      {{/if}}
-    </div>
-  </script>
-  <script type='text/x-handlebars' data-template-name='components/contact-details'>
-    <div class='col-sm-9'>
-      <h2>About {{contact.name}}</h2>
-      <p>{{contact.about}}</p>
-      {{#if isProductive}}
-        <p class='text-muted'>Responsible for {{productsCount}} amazing products!</p>
-      {{/if}}
-    </div>
-    <div class='col-sm-3'>
-      <img {{bind-attr src='contact.avatar' alt='contact.name'}} class='img-thumbnail img-rounded'/>
-    </div>
-  </script>
-  <script type='text/x-handlebars' data-template-name='reviews'>
-    <h3>Reviews</h3>
-    <ul>
-      {{#each}}
-        {{#view 'App.ReviewView' tagName='li' length=text.length}}
-          <div class='content'>{{text}}</div>
-          <span class='expand text-success'>
-            Read {{#if view.isExpanded}}Less{{else}}More{{/if}}
-          </span>
-        {{/view}}
-      {{else}}
-        <li><p class='text-muted'><em>No reviews yet. Be the first to write one!</em></p></li>
-      {{/each}}
-    </ul>
-  </script>
-</body>
+
+    
+
+  </body>
 </html>
