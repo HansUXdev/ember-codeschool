@@ -1,0 +1,466 @@
+/**********************************************************************/
+/****************** MEDIA QUERIES ************************************/
+/********************************************************************/
+@media (max-width: 1200px) {
+  /* line 6, ../scss/index/_media.scss */
+  .jumbotron .mobile {
+    margin-left: -164px;
+    width: 560px !important;
+  }
+}
+@media (max-width: 979px) {
+  /* line 13, ../scss/index/_media.scss */
+  .navbar-collapse {
+    float: right;
+  }
+
+  /* line 16, ../scss/index/_media.scss */
+  .navbar-inverse .navbar-nav > li > a {
+    font-size: 16px;
+    padding: 25px 12px;
+  }
+
+  /* line 21, ../scss/index/_media.scss */
+  .navbar > .container .navbar-brand,
+  .navbar > .container-fluid .navbar-brand {
+    font-size: 28px;
+    float: left;
+    margin: 15px 0;
+    width: auto;
+  }
+
+  /* line 27, ../scss/index/_media.scss */
+  .navbar-inverse .navbar-brand .fa-stack {
+    font-size: 22px;
+  }
+
+  /* line 30, ../scss/index/_media.scss */
+  .navbar-nav {
+    float: left;
+  }
+
+  /* line 33, ../scss/index/_media.scss */
+  .jumbotron {
+    padding-top: 100px;
+  }
+
+  /* line 36, ../scss/index/_media.scss */
+  .jumbotron .jumboText {
+    text-align: center;
+  }
+
+  /* line 39, ../scss/index/_media.scss */
+  .jumbotron h1 {
+    font-size: 45px !important;
+  }
+
+  /* line 42, ../scss/index/_media.scss */
+  .jumbotron .actionBtn {
+    margin-bottom: 50px;
+  }
+
+  /* line 45, ../scss/index/_media.scss */
+  .jumbotron .mobile {
+    margin-left: -48px;
+    position: relative;
+    left: 2em;
+  }
+
+  /* line 50, ../scss/index/_media.scss */
+  #productWrap .imgWrap img {
+    margin: 0 auto 60px;
+  }
+
+  /* line 53, ../scss/index/_media.scss */
+  #contactWrap .blurb {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 59, ../scss/index/_media.scss */
+  .navbar-collapse {
+    float: none;
+  }
+
+  /* line 62, ../scss/index/_media.scss */
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    float: left;
+    margin: 15px 0 15px 15px;
+  }
+
+  /* line 66, ../scss/index/_media.scss */
+  .navbar-inverse .navbar-nav > li > a {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+
+  /* line 70, ../scss/index/_media.scss */
+  .jumbotron {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 74, ../scss/index/_media.scss */
+  .jumbotron h1 {
+    font-size: 48px;
+  }
+
+  /* line 77, ../scss/index/_media.scss */
+  .jumbotron h2 {
+    font-size: 22px;
+  }
+
+  /* line 81, ../scss/index/_media.scss */
+  #featureWrap .feature {
+    margin-bottom: 40px;
+  }
+
+  /* line 84, ../scss/index/_media.scss */
+  #productWrap .productFeatures .icon {
+    font-size: 14px;
+  }
+
+  /* line 87, ../scss/index/_media.scss */
+  #pricingWrap .priceTable {
+    margin-bottom: 60px;
+  }
+}
+/**********************************************************************/
+/************************ TESTIMONIALS *******************************/
+/********************************************************************/
+/* line 5, ../scss/index/_testimonials.scss */
+#testimonialsWrap {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+/* line 9, ../scss/index/_testimonials.scss */
+#testimonialsWrap .slides {
+  text-align: center;
+}
+
+/* line 12, ../scss/index/_testimonials.scss */
+#testimonialsWrap .quote {
+  color: #777777;
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* line 18, ../scss/index/_testimonials.scss */
+#testimonialsWrap .author {
+  color: #428BCA;
+  font-size: 20px;
+}
+
+/**********************************************************************/
+/************************** WHAT WE DO *******************************/
+/********************************************************************/
+/* line 5, ../scss/index/_app.scss */
+#featureWrap {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* line 9, ../scss/index/_app.scss */
+#featureWrap .icon {
+  -webkit-transition: All 0.2s linear;
+  -moz-transition: All 0.2s linear;
+  -o-transition: All 0.2s linear;
+}
+
+/* line 14, ../scss/index/_app.scss */
+#featureWrap .fa-stack.icnC {
+  color: #428BCA;
+  font-size: 74px;
+}
+
+/* line 18, ../scss/index/_app.scss */
+#featureWrap .icon {
+  background-color: #428BCA;
+  border: 4px solid #428BCA;
+  border-radius: 50%;
+  color: #FFFFFF;
+  display: block;
+  font-size: 80px;
+  height: 148px;
+  line-height: 140px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  width: 148px;
+}
+
+/* line 32, ../scss/index/_app.scss */
+#featureWrap .icon:hover {
+  color: #428BCA;
+  background-color: #fff;
+  cursor: default;
+}
+
+/* line 37, ../scss/index/_app.scss */
+#featureWrap h3 {
+  font-weight: 700;
+}
+
+/**********************************************************************/
+/************************** JUMBOTRON ********************************/
+/********************************************************************/
+/* line 45, ../scss/index/_app.scss */
+.jumbotron {
+  background: url(https://raw.githubusercontent.com/HansUXdev/portfolio/gh-pages/assets/img/bg.PNG) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 0;
+  padding-top: 140px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+/* line 56, ../scss/index/_app.scss */
+.jumbotron .mobile {
+  background-image: url(../assets/img/mobile.png);
+  background-repeat: no-repeat;
+  height: 499px;
+  margin-left: -96px;
+  margin-top: 0;
+  overflow: hidden;
+  width: auto;
+}
+
+/* line 65, ../scss/index/_app.scss */
+.jumbotron h1 {
+  color: #fff;
+  font-size: 54px;
+  font-weight: 700;
+  text-shadow: 0 1px 5px #222222;
+}
+
+/* line 71, ../scss/index/_app.scss */
+.jumbotron h2 {
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 1px 5px #222222;
+  margin-bottom: 30px;
+}
+
+/* line 77, ../scss/index/_app.scss */
+.jumbotron .actionBtn .line1 {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  width: 140px;
+  margin-top: 10px;
+}
+
+/* line 84, ../scss/index/_app.scss */
+.jumbotron .actionBtn .line2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/*
+    $font-stack:    Helvetica, sans-serif;
+    $primary-color: #333;
+
+    body {
+      font: 100% $font-stack;
+      color: $primary-color;
+    }
+*/
+/* line 3, ../scss/index/_header.scss */
+header {
+  background: url(https://raw.githubusercontent.com/HansUXdev/portfolio/gh-pages/assets/img/bigBG.jpg) no-repeat center center fixed;
+  background-size: 100% 100%;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  bottom: 7em;
+}
+/* line 20, ../scss/index/_header.scss */
+header .container {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+/* line 24, ../scss/index/_header.scss */
+header img {
+  display: block;
+  margin: 0 auto 20px;
+  /*Make Circle*/
+  border-radius: 50%;
+}
+/* line 30, ../scss/index/_header.scss */
+header .intro-text .name {
+  display: block;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+}
+/* line 37, ../scss/index/_header.scss */
+header .intro-text .skills {
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  /* line 44, ../scss/index/_header.scss */
+  header .container {
+    padding: 200px 0 100px;
+  }
+
+  /* line 48, ../scss/index/_header.scss */
+  header .intro-text .name {
+    font-size: 5em;
+  }
+
+  /* line 52, ../scss/index/_header.scss */
+  header .intro-text .skills {
+    font-size: 1.75em;
+  }
+}
+/**/
+/* line 3, ../scss/index/_general.scss */
+hr.star-light,
+hr.star-primary {
+  margin: 25px auto 30px;
+  padding: 0;
+  max-width: 250px;
+  border: 0;
+  border-top: solid 5px;
+  text-align: center;
+}
+
+/* line 13, ../scss/index/_general.scss */
+hr.star-light:after,
+hr.star-primary:after {
+  content: "\f005";
+  display: inline-block;
+  position: relative;
+  top: -.8em;
+  padding: 0 .25em;
+  font-family: FontAwesome;
+  font-size: 2em;
+}
+
+/* line 23, ../scss/index/_general.scss */
+hr.star-light {
+  border-color: #fff;
+}
+
+/* line 27, ../scss/index/_general.scss */
+hr.star-light:after {
+  color: #fff;
+  background-color: #18bc9c;
+}
+
+/* line 32, ../scss/index/_general.scss */
+hr.star-primary {
+  border-color: #2c3e50;
+}
+
+/* line 36, ../scss/index/_general.scss */
+hr.star-primary:after {
+  color: #2c3e50;
+  background-color: #fff;
+}
+
+/* line 41, ../scss/index/_general.scss */
+.img-centered {
+  margin: 0 auto;
+}
+
+/**/
+/* line 48, ../scss/index/_general.scss */
+.btn-outline {
+  margin-top: 15px;
+  border: solid 2px #fff;
+  font-size: 20px;
+  color: #fff;
+  background: 0 0;
+  transition: all .3s ease-in-out;
+}
+
+/* line 60, ../scss/index/_general.scss */
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+  border: solid 2px #fff;
+  color: #18bc9c;
+  background: #fff;
+}
+
+/* line 65, ../scss/index/_general.scss */
+.btn-social {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+/* line 78, ../scss/index/_general.scss */
+.btn:focus,
+.btn:active,
+.btn.active {
+  outline: 0;
+}
+
+/*
+    $font-stack:    Helvetica, sans-serif;
+    $primary-color: #333;
+
+    body {
+      font: 100% $font-stack;
+      color: $primary-color;
+    }
+*/
+@media (max-width: 767px) {
+  /* line 4, ../scss/index/_sections.scss */
+  section {
+    padding: 75px 0;
+  }
+
+  /* line 8, ../scss/index/_sections.scss */
+  section.first {
+    padding-top: 75px;
+  }
+}
+/* line 13, ../scss/index/_sections.scss */
+section {
+  padding: 100px 0;
+}
+
+/* line 16, ../scss/index/_sections.scss */
+section h2 {
+  margin: 0;
+  font-size: 3em;
+  text-align: center;
+}
+
+/* line 21, ../scss/index/_sections.scss */
+#about {
+  background-size: 100% 100%;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*#18bc9c*/
+}

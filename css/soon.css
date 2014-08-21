@@ -1,0 +1,16 @@
+/* line 1, ../scss/soon.scss */
+.container {
+  background: url(https://raw.githubusercontent.com/HansUXdev/portfolio/gh-pages/assets/img/bg.PNG) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 0;
+  padding-top: 140px;
+  color: #fff;
+  margin-bottom: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  bottom: 8em;
+}
